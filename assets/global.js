@@ -507,6 +507,7 @@ class SliderComponent extends HTMLElement {
     this.pageTotal = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
+    this.productSlider = this.querySelector('.product-slider-box');
 
     if (!this.slider || !this.nextButton) return;
 
@@ -523,13 +524,13 @@ class SliderComponent extends HTMLElement {
     this.sliderLastItem = sliderItemsToShow[sliderItemsToShow.length - 1];
     if (sliderItemsToShow.length === 0) return;
     this.slidesPerPage = Math.floor(this.slider.clientWidth / sliderItemsToShow[0].clientWidth);
-    this.totalPages = sliderItemsToShow.length - this.slidesPerPage + 1;
+    this.totalPages = sliderItemsToShow.length - this.slidesPerPage + 4;
     this.update();
   }
 
   update() {
     if (!this.pageCount || !this.pageTotal) return;
-    this.currentPage = Math.round(this.slider.scrollLeft / this.sliderLastItem.clientWidth) + 1;
+    this.currentPage = Math.round(this.slider.scrollLeft / this.sliderLastItem.clientWidth) + 4;
 
     if (this.currentPage === 1) {
       this.prevButton.setAttribute('disabled', 'disabled');
