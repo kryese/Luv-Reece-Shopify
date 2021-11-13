@@ -109,6 +109,8 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'drawer.css' | asset_url | stylesheet_tag }}
+    {{ 'drawer.js' | asset_url | script_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -131,6 +133,7 @@
 
     {% section 'announcement-bar' %}
     {% section 'header' %}
+    {% section 'drawer' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
