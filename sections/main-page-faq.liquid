@@ -11,6 +11,18 @@
   <div class="rte">
     {{ page.content }}
   </div>
+  <div class="faq-container">
+  <div class="tabs">
+    {% for block in section.blocks %}
+        {% assign item = block.settings %}
+
+        <div class="tab">
+            <input "type"="checkbox" id="faq_checkbox_{{ forloop.index }}" class="faq-checkbox">
+        </div>
+{% endfor %}
+
+  </div>
+
 </div>
 
 {% schema %}
