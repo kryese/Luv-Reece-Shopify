@@ -926,7 +926,7 @@ summary::-webkit-details-marker {
 
 /* component-grid */
 .grid {
-  display: inline-block;
+  display: grid;
   flex-wrap: wrap;
   margin-bottom: 2rem;
   margin-left: -0.5rem;
