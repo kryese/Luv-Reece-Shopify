@@ -408,7 +408,7 @@ a.product__text {
     margin-left: -2.5rem;
     padding-bottom: 2rem;
     margin-bottom: 3rem;
-    width: calc(100% + 4rem);
+    width: calc(75% + 4rem);
   }
 
   .product__media-wrapper slider-component {
